@@ -1,0 +1,33 @@
+<h1 class="title">Population</h1>
+<form class="form" (ngSubmit)="submit()" autocomplete="off">
+
+  <div class="form-field">
+    <md-select
+      label="Country"
+      name="countryId"
+      [value]="populationData.countryId"
+      [options]="countriesToAdd(countries)"
+      (onChange)="onInputChange($event)">
+    </md-select>
+  </div>
+
+  <div class="form-field">
+    <input-field
+      label="Population"
+      name="amount"
+      [value]="populationData.amount"
+      (onChange)="onInputChange($event)">
+    </input-field>
+  </div>
+
+  <div class="form-actions">
+    <md-button type="submit">Submit</md-button>
+    <md-button type="button" (onClick)="eraseForm($event)">Cancel</md-button>
+  </div>
+
+</form>
+<div class="chart">
+  <bar-chart [sourceData]="chartData"></bar-chart>
+</div>
+
+<!-- <pre>Athis.localState = {{ localState | json }}</pre> -->

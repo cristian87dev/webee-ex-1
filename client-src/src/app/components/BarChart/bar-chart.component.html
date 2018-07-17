@@ -1,0 +1,15 @@
+<ngx-charts-bar-horizontal
+  *ngIf="result.length"
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="result"
+  [gradient]="gradient"
+  [xAxis]="showXAxis"
+  [yAxis]="showYAxis"
+  [legend]="showLegend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  (select)="onSelect($event)">
+</ngx-charts-bar-horizontal>

@@ -1,0 +1,9 @@
+<div #inputField class="mdc-text-field">
+  <input
+    [type]="type" id="input-field" class="mdc-text-field__input"
+    [name]="name"
+    [value]="_value"
+    (input)="onInputFieldChange($event)">
+  <label class="mdc-floating-label" for="input-field">{{ label }}</label>
+  <div class="mdc-line-ripple"></div>
+</div>

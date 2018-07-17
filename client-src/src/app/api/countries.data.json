@@ -1,0 +1,49 @@
+{
+  "countries": [
+    {
+      "name": "Argentina",
+      "isoCode": "ARG",
+      "id": "5b4aebb1da9ea00d43e78cd2"
+    },
+    {
+      "name": "United States of America",
+      "isoCode": "USA",
+      "id": "5b4aebfbda9ea00d43e78cd3"
+    },
+    {
+      "name": "France",
+      "isoCode": "FRA",
+      "id": "5b4cea901f9ae932f24256d1"
+    },
+    {
+      "name": "Mexico",
+      "isoCode": "MEX",
+      "id": "5b4ceaad1f9ae932f24256d2"
+    },
+    {
+      "name": "Germany",
+      "isoCode": "DEU",
+      "id": "5b4ceafa1f9ae932f24256d3"
+    },
+    {
+      "name": "Brasil",
+      "isoCode": "BRA",
+      "id": "5b4ceb101f9ae932f24256d4"
+    },
+    {
+      "name": "China",
+      "isoCode": "CHN",
+      "id": "5b4ceb221f9ae932f24256d5"
+    },
+    {
+      "name": "Japan",
+      "isoCode": "JPN",
+      "id": "5b4ceb341f9ae932f24256d6"
+    },
+    {
+      "name": "England",
+      "isoCode": "ENG",
+      "id": "5b4d4de01a7e6c4b0f82176b"
+    }
+  ]
+}

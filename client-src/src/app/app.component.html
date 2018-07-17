@@ -1,0 +1,17 @@
+<nav>
+  <a *ngIf="!authApi.isLoggedIn" [routerLink]=" ['./login'] "
+    routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Log In
+  </a>
+  <a *ngIf="authApi.isLoggedIn" [routerLink]=" ['./population'] "
+    routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+    Population
+  </a>
+  <button *ngIf="authApi.isLoggedIn" (click)="onLogout()">
+    Log Out
+  </button>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
