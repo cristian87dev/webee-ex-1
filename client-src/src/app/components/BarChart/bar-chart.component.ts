@@ -47,7 +47,10 @@ export class BarChartComponent implements OnInit {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
 
-  constructor() { }
+  constructor() {
+    this.deviceWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+    this.updateChartSize(this.deviceWidth, 50 * this.result.length);
+  }
 
   public ngOnInit() {
 

@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "build:aot:prod": "rimraf dist compiled && cross-env BUILD_AOT=1 SOURCE_MAP=0 npm run webpack -- --config config/webpack.prod.js --progress --profile --bail",
-    "build:aot": "npm run build:aot:prod",
+    "build:aot": "npm run build:aot:prod && npm run copy:prod",
     "build:aot:dev": "cross-env BUILD_AOT=1 npm run build:dev",
     "build:dev": "rimraf dist && npm run webpack -- --config config/webpack.dev.js --mode development --progress --profile --trace-deprecation",
     "build:docker": "npm run build:prod && docker build -t angular-webpack-starter:latest .",
@@ -35,7 +35,7 @@
     "clean:dist": "npm run rimraf -- dist",
     "clean:install": "npm set progress=false && npm install",
     "clean": "npm cache verify && npm run rimraf -- node_modules doc coverage dist compiled webpack-cache",
-    "copy:prod": "cp -r dist/* ../client/",
+    "copy:prod": "npm run rimraf ../client/* && cp -r dist/* ../client/",
     "docker": "docker",
     "docs": "npm run typedoc -- --options typedoc.json --exclude '**/*.spec.ts' ./src/",
     "docs:compodoc": "compodoc -p tsconfig.json",

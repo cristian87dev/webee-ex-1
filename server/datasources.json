@@ -1,12 +1,12 @@
 {
   "db": {
-    "host": "localhost",
-    "port": 27017,
+    "host": "ds131531.mlab.com",
+    "port": 31531,
     "url": "",
-    "database": "webeeEx1",
-    "password": "",
+    "database": "webee-db",
+    "password": "admin1234",
     "name": "db",
-    "user": "",
+    "user": "admin",
     "connector": "mongodb"
   }
 }

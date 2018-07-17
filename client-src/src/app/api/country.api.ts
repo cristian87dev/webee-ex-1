@@ -11,7 +11,7 @@ const MODEL_NAME = 'countries';
 export class CountryApi {
 
   constructor(
-    private http: HttpClient
+    public http: HttpClient
   ) { }
 
   public get() {

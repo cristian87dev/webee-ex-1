@@ -8,7 +8,7 @@ import { AuthApi } from '../../api';
 
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private authApi: AuthApi, private router: Router) {}
+  constructor(public authApi: AuthApi, public router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     let url: string = state.url;

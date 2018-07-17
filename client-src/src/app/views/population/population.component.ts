@@ -56,7 +56,7 @@ export class PopulationComponent implements OnInit {
     this.populationApi.post(this.populationData).subscribe(() => this.getPopulation());
   }
 
-  public eraseForm() {
+  public eraseForm($event: Event) {
     this.populationData = {
       id: null,
       countryId: null,
@@ -69,7 +69,7 @@ export class PopulationComponent implements OnInit {
     this.populationData[name] = value;
   }
 
-  getPopulation() {
+  public getPopulation() {
     this.populationApi.get().subscribe(
       (data: PopulationType[]) => {
         this.population = data;
@@ -78,7 +78,7 @@ export class PopulationComponent implements OnInit {
     );
   }
 
-  getCountries() {
+  public getCountries() {
     this.countryApi.get().subscribe(
       (data: any) => {
         this.countries = data;
@@ -86,7 +86,7 @@ export class PopulationComponent implements OnInit {
     );
   }
 
-  sanitazePopulationChartData(data: PopulationType[]) {
+  public sanitazePopulationChartData(data: PopulationType[]) {
     return data.map(item => {
       const country = this.countries.find(country => country.id === item.countryId) || {};
       const value = item.amount;
@@ -95,7 +95,7 @@ export class PopulationComponent implements OnInit {
     });
   }
 
-  countriesToAdd(countries: any[] = []) {
+  public countriesToAdd(countries: any[] = []) {
     const usedCountries = this.population.map(item => item.countryId);
     return countries.filter(item => usedCountries.indexOf(item.id) === -1);
   }

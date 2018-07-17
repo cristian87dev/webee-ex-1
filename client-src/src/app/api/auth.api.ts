@@ -21,7 +21,7 @@ export class AuthApi {
   public redirectUrl: string;
 
   constructor(
-    private http: HttpClient,
+    public http: HttpClient,
     public router: Router,
   ) { }
 

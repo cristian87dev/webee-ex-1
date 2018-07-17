@@ -19,7 +19,7 @@ export interface PopulationType {
 export class PopulationApi {
 
   constructor(
-    private http: HttpClient
+    public http: HttpClient
   ) { }
 
   public get() {
